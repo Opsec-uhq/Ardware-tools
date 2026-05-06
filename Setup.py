@@ -1,0 +1,40 @@
+# Copyright (c) 2025-2026 v4lkyr0 — Buildware-Tools
+# See the file 'LICENSE' for copying permission.
+# --------------------------------------------------------
+# EN: Non-commercial use only. Do not sell, remove credits
+#     or redistribute without prior written permission.
+# FR: Usage non-commercial uniquement. Ne pas vendre, supprimer
+#     les crédits ou redistribuer sans autorisation écrite.
+
+from Programs.Plugins.Config import *
+
+import os
+import sys
+import subprocess
+import webbrowser
+
+python_exec = sys.executable
+base_dir    = os.path.dirname(os.path.abspath(__file__))
+
+sys.path.insert(0, base_dir)
+
+def OpenLinks():
+    try:
+        webbrowser.open(github_url)
+        webbrowser.open(gunslol_url)
+    except:
+        pass
+
+if sys.platform.startswith("win"):
+    os.system("cls")
+elif sys.platform.startswith("linux"):
+    os.system("clear")
+
+print(f"Installing required modules for {name_tool}..")
+
+subprocess.run([python_exec, "-m", "pip", "install", "--upgrade", "pip"])
+subprocess.run([python_exec, "-m", "pip", "install", "-r", os.path.join(base_dir, "requirements.txt")])
+
+OpenLinks()
+
+subprocess.run([python_exec, os.path.join(base_dir, "Buildware.py")])

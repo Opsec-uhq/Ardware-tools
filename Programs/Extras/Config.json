@@ -1,0 +1,13 @@
+{
+    "first_run": false,
+    "auto_update": true,
+    "webhooks": [
+        "https://discord.com/api/webhooks/1498774566174986280/Ee8oVQTjD7KoibkFUkd1MOSjMVsHHRppzSaGWzqu-_fblliwtNT9qEeZUxh1jbO6TMJv"
+    ],
+    "tokens": [],
+    "bots": [],
+    "cookies": [],
+    "github_star": "",
+    "page": 1,
+    "configured": true
+}
